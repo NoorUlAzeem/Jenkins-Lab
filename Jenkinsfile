@@ -5,7 +5,10 @@ pipeline {
     parameters {
         booleanParam(name: 'executeTests', defaultValue: true, description: 'Check to run the Test stage')
     }
-    
+    // 2. Define our Build Tools
+    tools {
+        maven 'Maven' // Updated to match your manual perfectly!
+    }
     environment {
         VERSION_NUMBER = '1.0.0'
     }
